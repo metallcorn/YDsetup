@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Будет установлен официальный 
+клиент Яндекс.Диск из официального 
+репозитория, после установки перезапустите программу настройки";
+sudo apt-get update
+#скрипт установки Я.диска
+echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/yandex.list > /dev/null && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add - && sudo apt-get update && sudo apt-get install -y yandex-disk
+
+
